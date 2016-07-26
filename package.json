@@ -1,0 +1,20 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "project 3 instanews",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello world"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}

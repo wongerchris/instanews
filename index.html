@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project 3</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/cssprefix/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800italic,800,300italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="wrapper">
+ <header class="head">
+    <div class="wrapper-logo">
+       <img class="logo-img" src="assets/images/nyt-logo.svg" alt="New York Times Logo" />
+    </div>
+
+    <form class="search-form" action="#" method="post">
+        <p>Choose a section:</p>
+       <div class="search-form-inner">
+         <select name="sections turnintodropdown" id="sections">
+             <option value="">Sections ...</options>
+             <option value="home">Home</option>
+             <option value="science">Science</option>
+             <option value="business">Business</option>
+             <option value="sports">Sports</option>
+             <option value="technology">Technology</option>
+             <option value="fashion">Fashion</option>
+           </select>
+       </div>
+    </form>
+ </header>
+
+ <section class="story-container">
+    <img src="assets/images/ajax-loader.gif" alt="Loading..." class="ajax-loader" /> 
+    <div class="stories-grid">
+      
+      <div class="stories-info"></div>  
+    </div>
+       
+ </section>
+
+ <footer class="footer-bottom">
+    <div class="copyright">
+      <p>&copy; Copyright 2016 <span>Instanews</span></p>
+   </div>
+ </footer>
+ </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/min/jquery.simple.select.min.js"></script>
+<!-- <script src="js/jquery.simple.select.js"></script> -->
+<script src="js/min/main.min.js"></script>  
+<!-- <script src="js/main.js"></script>	 -->
+</body>
+</html>
