@@ -231,8 +231,18 @@ select {
       visibility: visible;
       animation-duration: 1s;
       animation-name: bounceInUp; }
+    .story-container .news .title {
+      margin-top: -15px;
+      height: auto;
+      text-shadow: 2px 2px rgba(50, 50, 50, 0.8);
+      padding: 30px 10px 20px 10px;
+      letter-spacing: 1px;
+      background-color: rgba(20, 20, 20, 0.5); }
     .story-container .news .info {
+      position: relative;
       background-color: rgba(0, 0, 0, 0.5);
+      border-top: solid 5px black;
+      border-bottom: solid 80px black;
       font-size: 1.1rem;
       visibility: hidden;
       position: absolute;
@@ -241,7 +251,19 @@ select {
       height: 230px;
       padding: 20px 5px; }
       .story-container .news .info:hover {
-        background-color: rgba(100, 0, 0, 0.8); }
+        background-color: rgba(0, 0, 0, 0.8); }
+      .story-container .news .info span {
+        display: block;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: -45px;
+        font-style: italic;
+        font-weight: bold; }
+        .story-container .news .info span:hover {
+          text-shadow: 2px 2px 1px #666; }
 
 /*---------- Footer Styles ----------*/
 footer {

@@ -38,33 +38,42 @@ $(function() {
 			var results = data.results;//array results
 			var rLength = data.results.length;//array length
 			var counter = 0;
-			
+
+			console.log(results);
 
 			if(rLength !== 0){
 
 		  $.each(results, function(key, value){
+		  	
+		  	if(value.multimedia.length && counter < 12){
+		  	counter++;
+		  	
+
 		  	//variables for news objects
 		  	var mediaLength = value.multimedia.length;
-		  	var multimedia = value.multimedia[4];	
+		  	var multimedia = value.multimedia[4].url;	
+		  	var title = value.title;
 		  	var mediaLink = value.url
 		  	var mediaInfo = value.abstract
 		  	var newsStory = ''
-		 	
-			//append news stories  
-			  	if(mediaLength){
-			  		
-			  		newsStory += '<div class="news" style="background-image:url('+multimedia.url+')">';
+		 		
+				//append news stories  
+			  		newsStory += '<div class="news" style="background-image:url('+multimedia+')">';
+			  		newsStory += '<h3 class="title">' + title + '</h3>';
 			  		newsStory += '<a href="';
 			  		newsStory += mediaLink;
 			  		newsStory += '" target="_blank">';
-			  		newsStory += '<p class="info">'+ mediaInfo + '</p>';
+			  		newsStory += '<p class="info">'+ mediaInfo;
+			  		newsStory += '<span>' + 'Read more' + '</span>';
+			  		newsStory += '</p>';
 			  		newsStory += '</a>';
 			  		newsStory += '</div>';
-
+			  	
 			  		$('.stories-grid').append(newsStory);
 						}
 		  	});
 			}
+			
 		 
 		}).fail(function(err) {
 		  $('.stories-grid').append('<p class="no-stories">Sorry there are no stories</p>');

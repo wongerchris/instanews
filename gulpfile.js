@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify'),
     rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
 
 //Path variables
 var sassLink = "sass/**/*.scss";
@@ -37,6 +38,7 @@ gulp.task('server', ['sass'], function() {
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 
+//Adds browser prefix to css
 gulp.task('autoprefix', function () {
     return gulp.src('./css/style.css')
         .pipe(autoprefixer({
@@ -46,6 +48,13 @@ gulp.task('autoprefix', function () {
         .pipe(gulp.dest('./css/cssprefix'));
 });
 
+//Minifies css file
+gulp.task('minify-css', function() {
+  return gulp.src('css/cssprefix/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({extname:'.min.css'}))
+    .pipe(gulp.dest('dist'));
+});
 
 //Watch task
 gulp.task('watch',function() {
