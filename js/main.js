@@ -39,7 +39,6 @@ $(function() {
 			var rLength = data.results.length;//array length
 			var counter = 0;
 
-			console.log(results);
 
 			if(rLength !== 0){
 
